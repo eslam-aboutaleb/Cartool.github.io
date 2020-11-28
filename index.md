@@ -1,37 +1,98 @@
-## Welcome to GitHub Pages
+<!-- 
+	 Author	:	Eslam Ehab Aboutaleb
+	 Date	:	12/11/2020
+	 version:	v01
+-->
 
-You can use the [editor on GitHub](https://github.com/eslam-aboutaleb/guernica.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Web page title -->
+	<title>ARM OTA Bootloader </title>
+	<!-- include CSS file -->
+	<link rel="stylesheet" href="style.css">
+</head>	
+<body>
+	<!-- main class options -->
+	<div class="main">
+		<nav>
+		
+			<div class = "logo">
+				<img src="Arm.png">
+			</div>
+			<div class = "nav-links">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Authors.html">Authors</a></li>
+					<li><a href="Bootloader Commands list.pdf" target="_blank">Bootloader commands list</a></li>
+					<li><a href="https://github.com/Mohamed-Saiyed/OverTheAir-Bootloader" target="_blank">Source code</a></li>
+				</ul>
+			</div>
+			
+		</nav>
+		
+		<!-- Information class -->
+		<div class="information">
+			<div class= "overlay"></div>
+			<img src="stm.png" class="mirco">
+			<div id="circle">
+			
+				<div class="feature one">
+					<div>
+						<li><a href="BootApp.html">Bootloader App</a></li>
+					</div>	
+				</div>
+				<div class="feature two">
+					<div>
+						<li>Bootloader manual</li>
+					</div>	
+				</div>
+				<div class="feature three">
+					<div>
+						<li>Bootloader version</li>
+					</div>	
+				</div>
+				
+				<div class="feature four">
+					<div>
+						<li>Bootloader Circuit</li>
+					</div>	
+				</div>
+			
+			</div>
+		</div>	
+		<div class="controls">
+			<img src="arrow.png" id="upBtn">
+			<h3>Features</h3>
+			<img src="arrow.png" id="downBtn">
+		</div>
+	</div>
+	
+	<script>
+		var circle = document.getElementById("circle");
+		var upBtn = document.getElementById("upBtn");
+		var downBtn = document.getElementById("downBtn");
+		
+		var rotateValue = circle.style.transform;
+		var totateSum;
+		
+		upBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(-90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+		downBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+		Home.onclick = function()
+		{
+			
+		}
+	</script>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/eslam-aboutaleb/guernica.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+</body>
+</html>
