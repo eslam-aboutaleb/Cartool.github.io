@@ -2,15 +2,22 @@
 
 $admins = array("admin");
 $passwords =array("admin");
-$UserName = $_GET["UserName"];
-$UserPass = $_GET["Userpassword"];
-
-
-if((in_array($UserName , $admins)) && (in_array($UserPass , $passwords)))
+if(isset($_GET["UserName"]))
 {
-	header("Location:fileRecv.html");
+	$UserName = $_GET["UserName"];
+	if(isset($_GET["Userpassword"]))
+	{
+		$UserPass = $_GET["Userpassword"];
+		if((in_array($UserName , $admins)) && (in_array($UserPass , $passwords)))
+		{
+			header("Location:fileRecv.html");
+		}
+		else
+		{
+			header("Location:BootApp.html");
+		}
+		
+	}
+
 }
-else
-{
-	header("Location:BootApp.html");
-}
+
