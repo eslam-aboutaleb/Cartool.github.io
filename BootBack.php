@@ -9,14 +9,15 @@ if(isset($_GET["UserName"]))
 if(isset($_GET["Userpassword"]))
 {
 	$UserPass = $_GET["Userpassword"];
-}
-
-if((in_array($UserName , $admins)) && (in_array($UserPass , $passwords)))
-{
-	header("Location:BootApp.html");
-}
-else
-{
-	header("Location:fileRecv.html");
 	
+	if((in_array($UserName , $admins)) && (in_array($UserPass , $passwords)))
+	{
+		header("Location:fileRecv.html");
+		
+	}
+	else
+	{
+		header("Location:BootApp.html");
+		
+	}
 }
