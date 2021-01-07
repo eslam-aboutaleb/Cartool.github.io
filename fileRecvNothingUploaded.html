@@ -11,6 +11,8 @@
 	<title>Bootloader App </title>
 	<!-- include CSS file -->
 	<link rel="stylesheet" href="fileRecvStyle.css">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>	
 <body>
 	<div class="main">
@@ -24,9 +26,17 @@
 				</ul>
 			</div>			
 		</nav>
-		
+		<script>
+		swal({
+		  title: "Error while uploading!",
+		  text: "You didn't select file or something bad happened!",
+		  icon: "warning",
+		  dangerMode: true,
+		})
+
+		</script>
 		<label class="UploadLabel">Upload HEX file</label>
-		<form class="UploadFile" action="fileHandle.php" method="post" enctype="multipart/form-data">
+		<form class="UploadFile" action="fileHandle.php" method="POST" enctype="multipart/form-data">
 			
 			<input type="file" name="file" id="real-file" hidden="hiddden"/>
 			<button type="button" id="custom-button">Choose file</button>
