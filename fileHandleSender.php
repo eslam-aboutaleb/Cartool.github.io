@@ -13,9 +13,9 @@
 	if($_SERVER['REQUEST_METHOD'] == 'GET')
 	{
 		$LinesFileHandle = fopen('HexLinesFile.txt','w');
-		for($iterator = 0;$iterator < 10;$iterator++)
+		for($iterator = 0;$iterator < 20;$iterator++)
 		{
-			fwrite($LinesFileHandle,$ArrToSend[(int)$ArrIndex]);
+			fwrite($LinesFileHandle,$ArrToSend[(int)$ArrIndex]."\n");
 			(int)$ArrIndex++;
 		}
 		fclose($LinesFileHandle);
